@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cal{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-color: purple;
+}
+
+.inp{
+    padding: 10px;
+    border: 1px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.btn{
+    padding: 5px;
+    border: 1px;
+    border-radius: 10px;
+    border-color: red;
+    width: 50px;
+    cursor: pointer;
+}
+
+.res{
+    background-color: yellow;
+    padding: 20px;
+    width: 100px;
+}

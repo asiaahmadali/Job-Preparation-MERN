@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div class="cal">
+           <input type="text" class="inp" id="firstnum" placeholder="Please Enter the first number">
+           <input type="text" class="inp" id="secondnum" placeholder="Please Enter the second number">
+
+           <button onclick="add()" class="btn">+</button>
+           <button onclick="sub()" class="btn">-</button>
+           <button onclick="mul()" class="btn">*</button>
+           <button onclick="div()" class="btn">/</button>
+
+           <p id="result" class="res"></p>
+    </div>
+</body>
+<script src="./calculator.js"></script>
+</html>
