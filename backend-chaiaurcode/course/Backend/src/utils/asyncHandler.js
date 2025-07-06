@@ -11,13 +11,14 @@ const asyncHandler = (fn) => async (req, res, next) => {
 
 export default asyncHandler;
 
-const asyncHandlerrr = (fun) => (req, res, next) => {
-  try {
-    fun(req, res, next);
-  } catch (error) {
-    res.send(error.code || 500).json({
-      success: false,
-      message: error.message,
-    });
-  }
-};
+// const asyncHandler=(requesthandlerfun)=>{
+//   (req,res,next)=>{
+//     Promise.resolve(()=>{
+//         requesthandlerfun(req,res,next);
+//     })
+//     .reject((err)=>{
+//       console.log(err)
+//     })
+//   }
+// }
+// export default asyncHandler;

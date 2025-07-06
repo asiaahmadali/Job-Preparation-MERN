@@ -1,39 +1,41 @@
 import mongoose from "mongoose";
 import { contactSchema } from "./contact.models";
 
-const patientSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required:true,
-        lowercase:true
+const patientSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+      lowercase: true,
     },
-    age:{
-        type:Number,
-        required:true,
-        trim:true
+    age: {
+      type: Number,
+      required: true,
+      trim: true,
     },
-    gender:{
-        type:String,
-        enum:["Female","Male"],
-        required:true
+    gender: {
+      type: String,
+      enum: ["Female", "Male"],
+      required: true,
     },
-    contactinfo:{
-        type:contactSchema,
-        required:true
+    contactinfo: {
+      type: contactSchema,
+      required: true,
     },
-    medicalHistory:{
-     type:[String],
-     default:[]
+    medicalHistory: {
+      type: [String],
+      default: [],
     },
-    currentmedication:{
-        type:[String],
-        type:[]
+    currentmedication: {
+      type: [String],
+      type: [],
     },
-    appointments:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"appointment"
-    }
+    appointments: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "appointment",
+    },
+  },
+  { timestamps: true }
+);
 
-},{timestamps:true}) ;
-
-export const patient = mongoose.model("patient",patientSchema);
+export const patient = mongoose.model("patient", patientSchema);
