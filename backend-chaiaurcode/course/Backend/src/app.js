@@ -18,9 +18,13 @@ app.use(
 ); // form wegera se data leny k liye configuration
 
 app.use(express.urlencoded({ extended: true, limit: "16kb" })); // URL se data leny k liye configuration
-
 app.use(express.static("public"));
-
 app.use(cookieParser());
+
+// routes imports
+
+import Userrouter from "./routes/user.routes.js";
+
+app.use("/api/v1/users", Userrouter);
 
 export default app;

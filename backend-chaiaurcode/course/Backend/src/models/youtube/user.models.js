@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema(
       lowercase: true,
       trim: true,
     },
-    fullanme: {
+    fullname: {
       type: String,
       required: true,
       lowercase: true,
